@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huzaif Khan - Portfolio</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Huzaif Khan</h1>
+    <p class="subtitle">Frontend Developer & Student</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate developer learning modern web technologies and building cool projects. I enjoy working with HTML, CSS, JavaScript, and Python.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Weather App</strong> – A web app that shows weather data using OpenWeatherMap API.</li>
+      <li><strong>To-Do List</strong> – A productivity app to manage daily tasks.</li>
+      <li><strong>Portfolio Site</strong> – This personal site made with HTML, CSS, and JS.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: huzaif@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/huzaif" target="_blank">linkedin.com/in/huzaif</a></p>
+    <p>GitHub: <a href="https://github.com/huzaif" target="_blank">github.com/huzaif</a></p>
+  </section>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+
+    Notification.requestPermission().then(permission => {
+      if (permission === "granted") {
+        new Notification("Welcome to Huzaif's Portfolio!");
+      }
+    });
+  </script>
+</body>
+</html>
